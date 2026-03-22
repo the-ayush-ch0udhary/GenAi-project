@@ -186,21 +186,121 @@ If AI fails:
 * Possible Condition: Cardiac event
 * Action: Call emergency services immediately
 
+## ▶️ Demo & Reproducibility
+
+### 🔧 Setup Instructions
+
+Follow these steps to run the project locally:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/your-username/your-repo-name.git
+
+# 2. Navigate into the project
+cd GenAi-main
+
+# 3. Install dependencies
+npm install
+
+# 4. Start the development server
+npm run dev
+```
+
+Open in browser:
+
+```
+http://localhost:5173
+```
+
 ---
-## 🚧 Future Improvements
 
-* Integration with hospital systems
-* Real-time vital monitoring
-* Edge deployment for offline disaster zones
+### ⚠️ Environment Variables (if using Supabase)
+
+Create a `.env` file in root:
+
+```
+VITE_SUPABASE_URL=your_url_here
+VITE_SUPABASE_ANON_KEY=your_key_here
+```
+
+---
+
+### 🎯 Example Demo Case
+
+**Input (voice/text):**
+
+```
+"chest pain... sweating... breathing heavy... 10 minutes"
+```
+
+**System Output:**
+
+```
+Severity: 🔴 Critical  
+Condition: Possible cardiac event  
+Action: Call emergency services immediately  
+Reason: Chest pain + sweating + shortness of breath
+```
 
 ---
 
-## Disclaimer
+### ⚡ Performance
 
-This system is designed to **assist**, not replace, medical professionals.
-Always rely on trained healthcare providers for final decisions.
+* Average response time: < 2 seconds
+* Handles incomplete / noisy input
+* Uses context pruning before AI call
 
 ---
+
+### 🧪 Test Scenarios
+
+Try these:
+
+1. **Stroke-like symptoms**
+
+```
+"can't move left side... slurred speech"
+```
+
+2. **Low priority case**
+
+```
+"mild headache since morning"
+```
+
+3. **Accident case**
+
+```
+"bleeding heavily from leg after fall"
+```
+
+---
+
+### 🧯 Fail-safe Behavior
+
+If system confidence is low:
+
+```
+"Seek immediate medical attention"
+```
+
+---
+
+### 📴 Offline Mode
+
+If AI/API fails:
+
+* Rule-based triage still works
+* Covers common emergency patterns
+
+---
+
+### 📌 Notes
+
+* Designed for emergency triage, not diagnosis
+* Optimized for speed over completeness
+* Works even with broken or incomplete input
+
 
 ## Final Note
 
