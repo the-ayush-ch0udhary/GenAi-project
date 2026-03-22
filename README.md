@@ -302,10 +302,5 @@ If AI/API fails:
 * Works even with broken or incomplete input
 
 
-## Final Note
+Thank You 
 
-This isn’t about building a “cool AI app.”
-
-It’s about building something that:
-
-> **Works under pressure, with bad input, and still gives the right signal fast.**
